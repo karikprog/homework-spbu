@@ -1,6 +1,10 @@
+---
+layout: default
+---
+
 # Образование
 - Студент бакалавриата СПбГУ по направлению «Технологии программирования»
 
 # Контакты
 - email: <karamanov2007@gmail.com>
-- telegram: [@Karimk5]
+- telegram: @Karimk5
