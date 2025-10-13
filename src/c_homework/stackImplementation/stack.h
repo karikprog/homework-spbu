@@ -10,6 +10,7 @@ typedef struct {
     int size;
 } DynamicStack;
 
+DynamicStack* createStack();
 int isEmpty(DynamicStack* s);
 void push(DynamicStack* s, int value);
 int pop(DynamicStack* s);
