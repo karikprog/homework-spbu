@@ -7,7 +7,8 @@
 !.vscode/*.code-snippets
 
 #
-build
+buildBracked
+buildShunting
 
 # Local History for Visual Studio Code
 .history/
