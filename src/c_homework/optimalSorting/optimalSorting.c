@@ -1,7 +1,6 @@
+#include "quickSort.h"
 #include <stdio.h>
 #include <string.h>
-
-extern void quickSort(int values[], int low, int high);
 
 int swapCount(int l1[], int l2[], int n)
 {
@@ -37,5 +36,5 @@ int main()
     int swCount = swapCount(values, valuesCopy, n);
     printf("%d\n", swCount);
 
-    return 0;
+    return swCount;
 }

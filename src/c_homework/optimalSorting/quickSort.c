@@ -7,7 +7,7 @@ void swap(int* v1, int* v2)
     *v2 = temp;
 }
 
-int partitation(int low, int high, int values[])
+int partition(int low, int high, int values[])
 {
     int pivot = values[high];
     int i = low - 1;
@@ -25,7 +25,7 @@ int partitation(int low, int high, int values[])
 void quickSort(int values[], int low, int high)
 {
     if (low < high) {
-        int pi = partitation(low, high, values);
+        int pi = partition(low, high, values);
         quickSort(values, pi + 1, high);
         quickSort(values, low, pi - 1);
     }
