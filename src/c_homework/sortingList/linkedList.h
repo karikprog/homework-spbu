@@ -20,6 +20,6 @@ void addFirst(SinglyLinkedList* list, int value);
 void addLast(SinglyLinkedList* list, int value);
 // void insert(SinglyLinkedList* list, int value, int index);
 int getValue(SinglyLinkedList* list, int index);
-void deleteValue(SinglyLinkedList* list, int value);
+int deleteValue(SinglyLinkedList* list, int value);
 void printList(SinglyLinkedList* list);
 int addValueInSortList(SinglyLinkedList* list, int value);
