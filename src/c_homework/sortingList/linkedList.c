@@ -86,7 +86,7 @@ int getValue(SinglyLinkedList* list, int index)
 {
     if (index > list->size - 1) {
         printf("Index out of range\n");
-        return 1;
+        return -1;
     }
     SinglyListNode* curr = list->head;
     for (int i = 0; i < index; i++) {
@@ -95,11 +95,11 @@ int getValue(SinglyLinkedList* list, int index)
     return curr->data;
 }
 
-void deleteValue(SinglyLinkedList* list, int value)
+int deleteValue(SinglyLinkedList* list, int value)
 {
     if (list->head == NULL) {
         printf("List is empty\n");
-        return;
+        return 1;
     }
     SinglyListNode* curr = list->head;
 
@@ -107,7 +107,7 @@ void deleteValue(SinglyLinkedList* list, int value)
         list->head = list->head->next;
         free(curr);
         list->size--;
-        return;
+        return 0;
     }
     while (curr->next != NULL && curr->next->data != value) {
         curr = curr->next;
@@ -115,13 +115,14 @@ void deleteValue(SinglyLinkedList* list, int value)
 
     if (curr->next == NULL) {
         printf("Value not found\n");
-        return;
+        return 1;
     }
 
     SinglyListNode* temp = curr->next;
     curr->next = curr->next->next;
     free(temp);
     list->size--;
+    return 0;
 }
 
 void printList(SinglyLinkedList* list)

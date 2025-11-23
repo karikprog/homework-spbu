@@ -1,5 +1,7 @@
 #include "linkedList.h"
+#include "tests/testSortingList.h"
 #include <stdio.h>
+#include <string.h>
 
 void start(SinglyLinkedList* list)
 {
@@ -43,8 +45,13 @@ void start(SinglyLinkedList* list)
     }
 }
 
-int main(void)
+int main(int argc, char* argv[])
 {
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "--test") == 0) {
+            return runTest();
+        }
+    }
     SinglyLinkedList* list = createSinglyLinkedList();
     start(list);
 
