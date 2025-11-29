@@ -18,3 +18,5 @@
 .ionide
 
 venv
+build
+.vscode
