@@ -22,3 +22,5 @@ buildShunting
 .ionide
 
 venv
+.vscode
+build
