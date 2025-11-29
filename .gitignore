@@ -22,9 +22,13 @@ buildShunting
 .ionide
 
 venv
+<<<<<<< HEAD
 
 
 
 
 
+=======
+.vscode
+>>>>>>> 8fb3f5b (fix cmake file)
 build
