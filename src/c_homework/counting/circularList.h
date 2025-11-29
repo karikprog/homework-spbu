@@ -15,6 +15,4 @@ CircularLinkedList* createCircularLinkedList();
 int isEmpty(CircularLinkedList* list);
 void addFirst(CircularLinkedList* list, int value);
 void addLast(CircularLinkedList* list, int value);
-void deleteValue(CircularLinkedList* list, int value);
 void deleteList(CircularLinkedList* list);
-void deleteNode(CircularLinkedList* list, CircularListNode* curr, CircularListNode* prev);
