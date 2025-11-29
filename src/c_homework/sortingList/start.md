@@ -15,3 +15,10 @@ cmake --build build
 cd build
 ctest
 ```
+
+## Запуск через cmake:
+``` bash
+cmake . -B build
+cmake --build build
+./build/app
+```

@@ -1,4 +1,4 @@
-#include "../linkedList.h"
+#include "linkedList.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -91,9 +91,30 @@ int testDeleteValue()
     for (int i = 0; i < 2; i++) {
         node = node->next;
     }
+    int checkResultLen = list->size == (len - 1);
     int result = node->next->data == 545;
     deleteList(&list);
     return !(result && resultIncorrect);
+}
+
+// The function should remove the first one it encounters.
+int testDeleteDuplicate()
+{
+    SinglyLinkedList* list = createSinglyLinkedList();
+    int data[] = { 12, 5, 5, 7 };
+    int len = sizeof(data) / sizeof(int);
+    for (int i = 0; i < len; i++) {
+        addLast(list, data[i]);
+    }
+    int err = deleteValue(list, 5);
+    if (err != 0) {
+        return 1;
+    }
+    SinglyListNode* node = createNode();
+    node = list->head;
+    int result = node->next->data == 5;
+    deleteList(&list);
+    return !result;
 }
 
 int testDeleteOneValueList()
@@ -184,6 +205,12 @@ int runTest()
         failures++;
     } else {
         printf("Test 8 PASSED.\n");
+    }
+    if (testDeleteDuplicate() != 0) {
+        fprintf(stderr, "FAILURE: Delete duplicate value error\n");
+        failures++;
+    } else {
+        printf("Test 9 PASSED.\n");
     }
     if (failures > 0) {
         return EXIT_FAILURE;
