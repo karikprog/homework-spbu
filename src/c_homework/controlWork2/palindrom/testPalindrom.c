@@ -7,7 +7,6 @@ int testCorrectPalindrom()
     List* list = createList();
     int n = 9;
     int values[] = { 1, 2, 3, 4, 5, 4, 3, 2, 1 };
-    Node* curr = list->head;
     for (int i = 0; i < n; i++) {
         addLast(list, values[i]);
     }
@@ -21,7 +20,6 @@ int testIncorrectPalindrom()
     List* list = createList();
     int n = 6;
     int values[] = { 4, 3, 2, 6, 5, 7 };
-    Node* curr = list->head;
     for (int i = 0; i < n; i++) {
         addLast(list, values[i]);
     }
