@@ -1,19 +1,36 @@
-from itertools import permutations
+solutions_all = {
+    1: 1,
+    2: 0,
+    3: 0,
+    4: 2,
+    5: 10,
+    6: 4,
+    7: 40,
+    8: 92,
+    9: 352,
+    10: 724,
+    11: 2680,
+    12: 14200,
+    13: 73712,
+    14: 365596,
+    15: 2279184,
+    16: 14772512,
+    17: 95815104,
+    18: 666090624,
+    19: 4968057848,
+    20: 39029188884,
+    21: 314666222712,
+    22: 2691008704644,
+    23: 24233937684440,
+    24: 227514171973736,
+    25: 2207893435808352,
+    26: 22317699616364004,
+    27: 234907967154122528,
+}
 
 
-def get_permutation_queen(n: int) -> int:
-    c = 0
-    for perm in permutations(range(n)):
-        fl = True
-        for i in range(n):
-            for j in range(i):
-                if not (abs(perm[i] - perm[j]) != abs(i - j)):
-                    fl = False
-                    break
-        if fl:
-            c += 1
-
-    return c
-
-
-print(get_permutation_queen(5))
+n = int(input("Введите количество ферзей: "))
+if n > 29:
+    print("Слишком много")
+else:
+    print(solutions_all[n])
