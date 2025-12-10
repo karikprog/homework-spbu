@@ -6,6 +6,10 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+#
+buildBracked
+buildShunting
+
 # Local History for Visual Studio Code
 .history/
 
