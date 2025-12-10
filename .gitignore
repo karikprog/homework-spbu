@@ -6,6 +6,10 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+#
+buildBracked
+buildShunting
+
 # Local History for Visual Studio Code
 .history/
 
@@ -18,9 +22,13 @@
 .ionide
 
 venv
+<<<<<<< HEAD
 
 
 
 
 
+=======
+.vscode
+>>>>>>> 8fb3f5b (fix cmake file)
 build
