@@ -1,0 +1,3 @@
+select = ["E", "W"]
+ignore = []
+line-length = 79
